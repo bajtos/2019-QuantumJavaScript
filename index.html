@@ -38,6 +38,12 @@
         box-shadow: none;
       }
 
+      .reveal img.stealth {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+
       ul.nodisc {
         list-style-type: none;
       }
@@ -59,13 +65,25 @@
 
 <section>
   <br/>
+  <br/>
   <h2>Entangle qubits<br/>with JavaScript</h2>
-  <h4><em>A light introduction to Quantum Computing</em></h4>
+  <br/>
   <br/>
   <div style="text-align: right">
     <p>Miroslav Bajtoš
     <br/><em>Lead Node.js Engineer @ IBM</em>
   </div>
+</section>
+
+<section>
+  <h2>At day...</h2>
+  <div class="fragment">
+    <img width="200" class="stealth" src="img/loopback-v3.svg" alt="LoopBack v3 logo" />
+    &nbsp;&nbsp;
+    <img width="200" class="stealth" src="img/loopback-mark-frame-white.svg" alt="LoopBack v4 logo" />
+    <p><a href="https://loopback.io" target="_blank" rel="noopener">loopback.io</a>
+  </div>
+  <p class="fragment" style="text-align: right">and at night &rarr;
 </section>
 
 <section>
@@ -103,13 +121,13 @@
 </section>
 
 <section>
-  <h2>superpozice</h2>
-  <p class="note">(superposition)
+  <h2>superposition</h2>
+  <p class="note">(🇨🇿 superpozice)
 </section>
 
 <section>
-  <h2>provázanost</h2>
-  <p class="note">(entanglement)
+  <h2>entanglement</h2>
+  <p class="note">(🇨🇿 provázanost)
 </section>
 
 <section>
@@ -125,15 +143,15 @@
 </section>
 
 <section>
-  <h2>Kvantové algoritmy</h2>
-  <p class="fragment">vyhledávaní: Grover
-  <p class="fragment">faktorizace: Shor
-  <p class="fragment">(a mnoho dalších)
+  <h2>Quantum algorithms</h2>
+  <p class="fragment">search: Grover
+  <p class="fragment">factorization: Shor
+  <p class="fragment">(and many more)
 </section>
 
 <section>
-  <h2>Dekohese</h2>
-  <p class="note">(quantum decoherence)
+  <h2>quantum decoherence</h2>
+  <p class="note">(🇨🇿 dekohese)
 </section>
 
 <section>
@@ -149,19 +167,19 @@
 </section>
 
 <section>
-  <h2>Detekce &amp; oprava chyb</h2>
-  <p class="fragment">spolehlivý počítač =~ 1 000 - 100 000 qubitů
+  <h2>Error<br/>detection &amp; correction</h2>
+  <p class="fragment">a reliable computer =~ 1 000 - 100 000 qubits
 </section>
 
 <section>
-  <h2>Současný stav</h2>
+  <h2>Current state</h2>
 </section>
 
 <section>
   <section>
     <h2>Hardware</h2>
     <ul class="fragment">
-      <li>IBM: 50 quibits
+      <li>IBM: 53 qubits
       <li>Intel: 49 qubits
       <li>Google: 72 qubits
       <li>Rigetti: 16 qubits
@@ -176,154 +194,150 @@
       We are in the era of vacuum tubes/transistors,
       trying to invent integrated circuits
     -->
-
   </section>
 </section>
 
 <section>
   <h2>Software</h2>
   <ul>
-    <li class="fragment">OpenQASM (assembler od IBM)
+    <li class="fragment">OpenQASM (assembler by IBM)
     <li class="fragment">Qiskit (IBM)
     <li class="fragment">Cirq (Google)
     <li class="fragment">ProjectQ (ETH Zürich)
-    <li class="fragment">Quil (assembler od Rigetti)
-    <li class="fragment">Forest SDK (Rigetti)
+    <li class="fragment">Microsoft Q#</li>
+    <li class="fragment">LIQ𝑈𝑖⏐〉(.NET simulator)</li>
+    <li class="fragment">Quil (assembler by Rigetti)
   </ul>
 </section>
 
 <section>
-  <h2>Python &amp; Qiskit</h2>
+  <section>
+    <h2>Quantum Supremacy (?)</h2>
+    <img src="img/quantum-supremacy-news.png" height="500" alt="Quantum Supremacy in the news"/>
+    <p class="attribution">
+    <a href="https://www.wired.com/story/why-googles-quantum-computing-victory-is-a-huge-deal-and-a-letdown/">https://www.wired.com/story/why-googles-quantum-computing-victory-is-a-huge-deal-and-a-letdown/</a>
+  </section>
+  <section>
+    <h3>The problem</h3>
+    <p>Generate random numbers following a given pattern
+  </section>
+  <section>
+    <h3>The achievement</h3>
+    <p>the quantum computer: 200 seconds
+    <p>a supercomputer: 10,000 years
+    <p class="fragment">BUT!
+    <p class="fragment">verified on simpler tasks only
+  </section>
 </section>
 
 <section>
   <section>
-    <h2>Kostra programu</h2>
+  <h2>JavaScript &amp; qiskit-js</h2>
   </section>
 
   <section>
-    <h3>Import funkcí</h3>
-    <pre><code class="python" data-trim data-noescape>
-      from qiskit import IBMQ, QuantumCircuit, QuantumRegister, \
-           ClassicalRegister, BasicAer, execute
-      from qiskit.providers.ibmq import least_busy
-      from qiskit.visualization import plot_histogram
-    </code></pre>
+    <p>😰
+    <p>qiskit-js was abandoned recently
+  </section>
+
+  <!--
+  <section>
+    <h3>Overview of qiskit</h3>
+    <img src="img/qiskit-overview.svg" alt="Overview of qiskit" class="stealth" />
+  </section>
+  -->
+
+  <section>
+    <h3>Current state</h3>
+    <img src="img/qiskit-now.svg" alt="Current state of qiskit" class="stealth" />
   </section>
 
   <section>
-    <h3>Příprava</h3>
-    <div class="fragment">
-    <p>Definice kvantových a klasických registrů</p>
+    <h3>Example code</h3>
+    <p class="note">In Python, sorry ;-)
     <pre><code class="python" data-trim data-noescape>
+      # setup
       q = QuantumRegister(1)
       c = ClassicalRegister(1)
-    </code></pre>
-    </div>
-    <div class="fragment">
-    <p>Vytvoření obvodu</p>
-    <pre><code class="python" data-trim data-noescape>
       circ = QuantumCircuit(q, c)
-    </code></pre>
-    </div>
-  </section>
 
-  <section>
-    <h3>Kvantový algoritmus</h3>
-    <pre><code class="python" data-trim data-noescape>
+      # build QASM
+      circ.h(q[0])
+      circ.cx(q[0], q[1])
       circ.measure(q, c)
-    </code></pre>
-  </section>
 
-  <section>
-    <h3>Vizualizace algoritmu</h3>
-    <pre><code class="python" data-trim data-noescape>
-    diag = circ.draw(output="mpl")
-    diag.savefig("img/skeleton-circuit.png", format="png")
-    </code></pre>
-    <img src="src/img/skeleton-circuit.png" alt="circuit of Skeleton example">
-  </section>
-
-  <section>
-    <h3>Konfigurace backendu</h3>
-    <div class="fragment">
-    <p>Simulátor</p>
-    <pre><code class="python" data-trim data-noescape>
+      # execute
       backend = BasicAer.get_backend('qasm_simulator')
-    </code></pre>
-    <p class="note">(POZOR! Simulátor "statevector" je k ničemu.)</p>
-    </div>
-    <div class="fragment">
-    <p>Skutečný hardware v cloudu</p>
-    <pre><code class="python" data-trim data-noescape>
-      IBMQ.load_accounts(hub=None)
-      large_enough_devices = IBMQ.backends(filters=lambda x:
-        not x.configuration().simulator)
-      backend = least_busy(large_enough_devices)
-    </code></pre>
-    </div>
-  </section>
-  <section>
-    <h3>Jdeme na to!</h3>
-    <pre><code class="python" data-trim data-noescape>
       job = execute(circuits, backend, shots=shots, max_credits=3)
       result = job.result()
     </code></pre>
   </section>
 
   <section>
-    <h3>Zpracování výsledků</h3>
-    <pre><code class="python" data-trim data-noescape>
-    counts = result.get_counts(circ)
-    print(counts)
-    # {'0': 1024}
+    <h3>The Future</h3>
+    <img src="img/qiskit-future.svg" alt="Vision of the future" class="stealth" />
+  </section>
+  <section>
+    <h3>Future code</h3>
+    <pre><code class="javascript" data-trim data-noescape>
+      import {Grover} from '@qiskit/algorithms';
 
-    diag = plot_histogram(counts)
-    diag.savefig("img/skeleton-histogram.png", format="png")
+      const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      const oracle = num => num % 2 === 0 &amp;&amp; num % 5 === 2;
+
+      const algorithm = Grover(data, oracle);
+      const result = await algorithm.run();
     </code></pre>
-  </section>
-
-  <section>
-    <h3>Výsledky ze simulátoru</h3>
-    <img src="src/img/skeleton-qasm_simulator.png"
-         alt="Histogram for skeleton example executed on qasm_simulator" />
-  </section>
-  <section>
-    <h3>Výsledky z hardware (ibmqx2)</h3>
-    <img src="src/img/skeleton-ibmqx2.png"
-         alt="Histogram for skeleton example executed on ibmqx2" />
   </section>
 </section>
 
 <section>
+  <h2>The strange world of qubits</h2>
+</section>
+
+<section>
   <section>
-    <h2>Brána X (NOT)</h2>
+    <h3>A minimal circuit</h3>
+    <pre class="fragment"><code class="python" data-trim data-noescape>
+    circ.measure(q, c)
+    </code></pre>
+    <img class="fragment" src="img/python/skeleton-circuit.png" alt="circuit of Skeleton example">
   </section>
 
   <section>
-    <h3>Kvantový algoritmus</h3>
-    <pre><code class="python" data-trim data-noescape>
+    <h4>Simulated results</h4>
+    <img src="img/python/skeleton-qasm_simulator.png"
+         alt="Histogram for skeleton example executed on qasm_simulator" />
+  </section>
+  <section>
+    <h4>Real results (ibmqx2)</h4>
+    <img src="img/python/skeleton-ibmqx2.png"
+         alt="Histogram for skeleton example executed on ibmqx2" />
+  </section>
+
+  <section>
+    <h3>Gate X (NOT)</h3>
+    <pre class="fragment"><code class="python" data-trim data-noescape>
       circ.x(q[0])
       circ.measure(q, c)
     </code></pre>
-    <img class="fragment" src="src/img/not-circuit.png" alt="circuit of NOT example">
+    <img class="fragment" src="img/python/not-circuit.png" alt="circuit of NOT example">
   </section>
 
   <section>
-    <h3>Výsledky ze simulátoru</h3>
-    <img src="src/img/not-qasm_simulator.png"
+    <h4>Simulated results</h4>
+    <img src="img/python/not-qasm_simulator.png"
          alt="Histogram for NOT example executed on qasm_simulator" />
   </section>
   <section>
-    <h3>Výsledky z hardware (ibmqx2)</h3>
-    <img src="src/img/not-ibmqx2.png"
+    <h4>Real results (ibmqx2)</h4>
+    <img src="img/python/not-ibmqx2.png"
          alt="Histogram for NOT example executed on ibmqx2" />
   </section>
   <section>
-    <h3>Uvolňování energie</h3>
-    <p class="note">(energy relaxation)</p>
+    <h4>Energy relaxation</h4>
     <img class="fragment"
-         src="src/img/energy-relaxation-ibmqx2.png"
+         src="img/python/energy-relaxation-ibmqx2.png"
          width=600
          alt="Histogram for ENERGY RELAXATION example executed on ibmqx2" />
   </section>
@@ -331,126 +345,118 @@
 
 <section>
   <section>
-    <h2>Hadamard</h2>
-    <p class="note">(superpozice)</p>
-  </section>
+    <h3>Hadamard Gate</h3>
+    <p class="note">(superposition)</p>
 
-  <section>
-    <h3>Kvantový algoritmus</h3>
-    <pre><code class="python" data-trim data-noescape>
+    <pre class="fragment"><code class="python" data-trim data-noescape>
       circ.h(q[0])
       circ.measure(q, c)
     </code></pre>
-    <img class="fragment" src="src/img/hadamard-circuit.png" alt="circuit of HADAMARD example">
+    <img class="fragment" src="img/python/hadamard-circuit.png" alt="circuit of HADAMARD example">
   </section>
 
   <section>
-    <h3>Výsledky ze simulátoru</h3>
-    <img src="src/img/hadamard-qasm_simulator.png"
+    <h3>Simulated results</h3>
+    <img src="img/python/hadamard-qasm_simulator.png"
          alt="Histogram for HADAMARD example executed on qasm_simulator" />
   </section>
   <section>
-    <h3>Výsledky z hardware (ibmqx2)</h3>
-    <img src="src/img/hadamard-qasm_simulator.png"
+    <h4>Real results (ibmqx2)</h4>
+    <img src="img/python/hadamard-ibmqx2.png"
          alt="Histogram for HADAMARD example executed on ibmqx2" />
   </section>
   <section>
-    <h3>Rozfázování</h3>
-    <p class="note">(dephasing)</p>
+    <h4>Dephasing</h4>
     <img class="fragment"
-         src="src/img/dephasing-echo-ibmqx2.png"
+         src="img/python/dephasing-echo-ibmqx2.png"
          width=600
          alt="Histogram for DEPHASING ECHO example executed on ibmqx2" />
   </section>
-</section>
 
-<section>
   <section>
     <h2>Bell state</h2>
-    <p class="note">(provázanost)</p>
-  </section>
-
-  <section>
-    <h3>Příprava</h3>
-    <p class="note">(potřebujeme víc registrů)</p>
-    <pre><code class="python" data-trim data-noescape>
-      q = QuantumRegister(2)
-      c = ClassicalRegister(2)
-    </code></pre>
-  </section>
-
-  <section>
-    <h3>Kvantový algoritmus</h3>
-    <pre><code class="python" data-trim data-noescape>
+    <p class="note">(entanglement)</p>
+    <pre class="fragment"><code class="python" data-trim data-noescape>
       circ.h(q[0])
       circ.cx(q[0], q[1])
       circ.measure(q, c)
     </code></pre>
-    <img class="fragment" src="src/img/bell-circuit.png" alt="circuit of BELL example">
+    <img class="fragment" src="img/python/bell-circuit.png" alt="circuit of BELL example">
   </section>
 
   <section>
-    <h3>Výsledky ze simulátoru</h3>
-    <img src="src/img/bell-qasm_simulator.png"
+    <h3>Simulated results</h3>
+    <img src="img/python/bell-qasm_simulator.png"
          alt="Histogram for BELL example executed on qasm_simulator" />
   </section>
   <section>
-    <h3>Výsledky z hardware (ibmqx2)</h3>
-    <img src="src/img/bell-ibmqx2.png"
+    <h4>Real results (ibmqx2)</h4>
+    <img src="img/python/bell-ibmqx2.png"
          alt="Histogram for BELL example executed on ibmqx2" />
   </section>
 </section>
 
 <section>
   <section>
-    <h2>Budoucnost</h2>
+    <h2>Future outlooks</h2>
   </section>
 
   <section>
-    <h3>Nové kvantové algoritmy</h3>
-    <p class="note fragment">(odolnější vůči chybám HW)
+    <h3>More qubits</h3>
+    <p class="note fragment">(progressing slowly)
   </section>
 
   <section>
-    <h3>Rychlejší řešení pro<br/>těžké problémy</h3>
-    <p class="note fragment">simulace přírody/chemie<br/>strojové učení
+    <h3>Higher-level APIs</h3>
+    <p class="note fragment">(implementation of standard algorithms)
   </section>
 
   <section>
-    <h3>Koexistence s klasickými počítači</h3>
+    <h3>New quantum algorithms</h3>
+    <p class="note fragment">(more resilient to HW errors)
+  </section>
+
+  <section>
+    <h3>Faster solutions for<br/>hard problems</h3>
+    <p class="note fragment">simulations of nature/chemistry<br/>machine learning
+  </section>
+
+  <section>
+    <h3>Co-existence with<br/>classical computers</h3>
     <p class="note fragment">FPU, GPU, QPU
   </section>
 
   <section>
-    <h3>Dobrodružství na několik dekád</h3>
-    <p class="note fragment">to samé říkají už posledních 20-30 let ;-)
+    <h3>Adventure for next few decates</h3>
+    <p class="note fragment">as repeatedly said for the past 20-30 years ;-)
   </section>
 </section>
 
 <section>
   <section>
-    <h2>Vyzkoušejte si!</h2>
+    <h2>Try it out!</h2>
   </section>
 
   <section>
     <h3>IBM Q Experience</h3>
-    <p>16 qubitů naživo v Cloudu
+    <p>16 qubits live in Cloud, free for everyone to use
     <p><a href="https://www.research.ibm.com/ibm-q/">https://www.research.ibm.com/ibm-q/</a>
   </section>
 
   <section>
     <h3>Hello Quantum</h3>
-    <p>Sada hlavolamů v mobilní aplikaci
+    <p>Explore the building blocks of quantum mechanics through puzzles.
     <p><a href="http://helloquantum.mybluemix.net">http://helloquantum.mybluemix.net</a>
   </section>
-</section>
 
-<section>
-  <h2>Další zdroje</h2>
-  <p>Zdrojáky</p>
-  <p><a href="https://github.com/bajtos/2019-QuantumPython/tree/master/src">github.com/bajtos/2019-QuantumPython/tree/master/src</a></p>
-  <p>Dokumentace Qiskit</p>
-  <p><a href="https://qiskit.org/documentation/overview.html">qiskit.org/documentation/overview.html</a></p>
+  <section>
+    <h3>Entanglion</h3>
+    <p>The world’s first open source Quantum board game.
+    <p><a href="https://entanglion.github.io">https://entanglion.github.io</a>
+    <p><br/>
+    <p>3D-print your own copy this Saturday in PrusaLab!
+    <p><a href="https://www.eventbrite.ca/e/vyrob-si-kvantovou-deskovku-u-prusi-tickets-63553309660">http://ibm.biz/deskovka</a>
+  </section>
 </section>
 
 <section>
@@ -463,12 +469,10 @@
 <section>
   <p><br/>
   <p><br/>
-  <h2>Děkuji!</h2>
+  <h2>Thank you!</h2>
   <p><br/>
-  <p class="note">slajdy: <a
-    href="https://bajtos.net/2018-QuantumIntro">bajtos.net/PyQ</a>
-  <p><br/>
-  <p><a href="https://www.meetup.com/nerddinner-hk/">meetup.com/nerddinner-hk</a>
+  <p class="note">slides: <a
+    href="https://bajtos.net/2019-QuantumJavaScript">bajtos.net/Q</a>
 </section>
 
 <!-- ======= SLIDES END ======= -->
