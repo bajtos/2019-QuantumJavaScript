@@ -1,6 +1,6 @@
 # An introduction to Quantum Computing for JavaScript developers
 
-View the slides at https://bajtos.net/2019-QuantumJavaScript
+View the slides at https://bajtos.github.io/2019-QuantumJavaScript
 
 Example programs are in [`src`](./src).
 
